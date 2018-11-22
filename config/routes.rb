@@ -5,5 +5,10 @@ Rails.application.routes.draw do
 
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
+
+    get "/user_games" => "user_games#index"
+
+    post "/user_games" => "user_games#create"
+    patch "/user_games/:id" => "user_games#update"
   end
 end
