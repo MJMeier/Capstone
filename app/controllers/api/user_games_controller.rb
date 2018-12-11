@@ -35,4 +35,11 @@ class Api::UserGamesController < ApplicationController
       render json: {errors: @user_game.errors.full_messages}, status: :unprocessable_entity
     end
   end
+
+  def all_picks
+    @user_games = UserGame.all
+
+    render "allpicks.json.jbuilder"
+    
+  end
 end
