@@ -14,6 +14,7 @@ json.array! @games.each do |game|
   json.home_score game["home"]["score"]
   json.visitor_nickname game["visitor"]["nickname"]
   json.visitor_score game["visitor"]["score"]
+  json.date game["date"]
   json.confidence_point nil
   json.users_pick nil
 end

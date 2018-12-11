@@ -13,6 +13,7 @@ class Api::UserGamesController < ApplicationController
     )
     @user_game.confidence_point = params["confidence_point"]
     @user_game.users_pick = params["users_pick"]
+    @user_game.game_date = params["game_date"]
 
     @user_game.save!
     if @user_game.save
@@ -40,6 +41,19 @@ class Api::UserGamesController < ApplicationController
     @user_games = UserGame.all
 
     render "allpicks.json.jbuilder"
-    
   end
 end
+
+  # def point_total
+  #   @winner = home_nickname
+  #   if home_score > visitor_score
+  #     else
+  #       @winner = visitor_nickname
+  #   end
+
+  #   if @winner == users_pick
+  #     they get confidence_point
+      
+  #   end   
+  # end
+
