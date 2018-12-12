@@ -44,16 +44,4 @@ class Api::UserGamesController < ApplicationController
   end
 end
 
-  # def point_total
-  #   @winner = home_nickname
-  #   if home_score > visitor_score
-  #     else
-  #       @winner = visitor_nickname
-  #   end
-
-  #   if @winner == users_pick
-  #     they get confidence_point
-      
-  #   end   
-  # end
 
