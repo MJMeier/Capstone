@@ -15,5 +15,11 @@ Rails.application.routes.draw do
     
     post "/sessions" => "sessions#create"
 
+    get "/messages" => "messages#index"
+    post "/messages" => "messages#create"
+    get "/messages/:id" => "messages#show"
+
+
+
   end
 end
