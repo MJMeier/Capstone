@@ -7,6 +7,8 @@ class Api::MessagesController < ApplicationController
   end
 
   def create
+    puts '*************************'
+    puts params
     @message = Message.new(
       user_id: current_user.id,
       message: params[:message]
