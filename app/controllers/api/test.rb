@@ -2,7 +2,7 @@ require "nba_api_wrapper"
 
 # date = "20181205"
 date = Time.now.strftime("%Y%m%d")
-games = NBA::Game.get_games(date)["sports_content"]["games"]["game"][0]
+games = NBA::Game.get_games(date)["sports_content"]["games"]["game"]
 pp games
 
 # games.each do |game|

@@ -17,4 +17,6 @@ json.array! @games.each do |game|
   json.date game["date"]
   json.confidence_point nil
   json.users_pick nil
+  json.period_status game["period_time"]["period_status"]
+  json.game_clock game["period_time"]["game_clock"]
 end

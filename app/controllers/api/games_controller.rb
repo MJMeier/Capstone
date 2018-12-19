@@ -6,6 +6,9 @@ class Api::GamesController < ApplicationController
 # @games = Game.all
 # date = "20181205"
     date = Time.now.strftime("%Y%m%d")
+    if params[:tomorrow] == "true"
+      date = 1.day.from_now.strftime("%Y%m%d")
+    end
     @games = NBA::Game.get_games(date)["sports_content"]["games"]["game"]
 
     # game = @games.each do |game|
