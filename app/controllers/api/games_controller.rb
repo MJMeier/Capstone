@@ -8,7 +8,7 @@ class Api::GamesController < ApplicationController
     date = Time.now.strftime("%Y%m%d")
     if params[:tomorrow] == "true"
       date = Date.today.strftime("%Y%m%d")
-    end
+    end 
     @games = NBA::Game.get_games(date)["sports_content"]["games"]["game"]
 
     # game = @games.each do |game|
